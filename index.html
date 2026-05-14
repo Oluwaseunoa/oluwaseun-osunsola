@@ -239,11 +239,16 @@
       transition:border-color .3s,transform .3s;
       position:relative; overflow:hidden;
     }
-    .project-card::after {
-      content:''; position:absolute; inset:0;
-      background:linear-gradient(135deg,rgba(0,245,196,.03),transparent);
-      opacity:0; transition:opacity .3s;
-    }
+   .project-card::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(0,245,196,.03),transparent);
+  opacity:0;
+  transition:opacity .3s;
+  pointer-events:none;
+}
+    
     .project-card:hover { border-color:rgba(0,245,196,.35); transform:translateY(-3px); }
     .project-card:hover::after { opacity:1; }
     .project-num { font-family:'Space Mono',monospace; font-size:.7rem; color:var(--accent); letter-spacing:.1em; }
@@ -259,6 +264,8 @@
       display:inline-flex; align-items:center; gap:.4rem;
       font-size:.85rem; font-weight:700; color:var(--accent);
       transition:gap .3s;
+      position: relative;
+      z-index: 5;
     }
     .project-link:hover { gap:.8rem; }
 
@@ -554,7 +561,7 @@
             <span class="stack-tag">AWS ECR</span><span class="stack-tag">ECS Fargate</span>
             <span class="stack-tag">Node.js</span><span class="stack-tag">React</span><span class="stack-tag">CI/CD</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/ecommerce-platform" target="_blank">View Repository →</a>
         </div>
 
         <div class="project-card reveal">
@@ -566,7 +573,7 @@
             <span class="stack-tag">Docker</span><span class="stack-tag">GitHub Webhooks</span>
             <span class="stack-tag">Java</span><span class="stack-tag">Pipeline as Code</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects/tree/main/Jenkins-Projects/Jenkins%20CICD%20Pipeline%20for%20Java%20Application%20on%20AWS%20EC2" target="_blank">View Repository →</a>
         </div>
 
         <div class="project-card reveal">
@@ -578,7 +585,7 @@
             <span class="stack-tag">NACLs</span><span class="stack-tag">Auto Scaling</span>
             <span class="stack-tag">ALB</span><span class="stack-tag">IAM</span><span class="stack-tag">Launch Templates</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects/tree/main/AWS%20Cloud%20Computing/Capstone-Project/Implementing%20a%20Scalable%20WordPress%20Site%20on%20AWS" target="_blank">View Repository →</a>
         </div>
 
         <div class="project-card reveal">
@@ -590,7 +597,7 @@
             <span class="stack-tag">IAM</span><span class="stack-tag">Shell Scripting</span>
             <span class="stack-tag">Linux</span><span class="stack-tag">Automation</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects/tree/main/AWS%20Cloud%20Computing/Shell%20Script%20for%20AWS%20IAM%20Management" target="_blank">View Repository →</a>
         </div>
 
         <div class="project-card reveal">
@@ -614,7 +621,7 @@
             <span class="stack-tag">PKI</span><span class="stack-tag">Digital Signatures</span>
             <span class="stack-tag">Incident Response</span><span class="stack-tag">IOC Extraction</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/Cybersecurity-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/Cybersecurity-Projects/tree/main/Cyber-Security-Fundamentals/Digital%20Forensic%20Analysis%20of%20a%20Phishing%20Email%20Impersonating%20DHL" target="_blank">View Repository →</a>
         </div>
 
         <div class="project-card reveal">
@@ -626,7 +633,7 @@
             <span class="stack-tag">Java</span><span class="stack-tag">OWASP</span>
             <span class="stack-tag">Vulnerability Analysis</span><span class="stack-tag">Secure SDLC</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/Cybersecurity-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/Cybersecurity-Projects/tree/main/Static-Application-Security-Testing/SAST101-Vulnerable-Java-Application%20Test" target="_blank">View Repository →</a>
         </div>
 
         <div class="project-card reveal">
@@ -638,7 +645,7 @@
             <span class="stack-tag">AWS EC2</span><span class="stack-tag">Bash</span>
             <span class="stack-tag">Web Deployment</span><span class="stack-tag">Version Control</span>
           </div>
-          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects" target="_blank">View Repository →</a>
+          <a class="project-link" href="https://github.com/Oluwaseunoa/DevOps-Projects/tree/main/AWS%20Cloud%20Computing/E-Commerce%20Platform%20Deployment%20with%20Git%2C%20Linux%2C%20and%20AWS" target="_blank">View Repository →</a>
         </div>
 
       </div>
@@ -712,7 +719,7 @@
   <!-- FOOTER -->
   <footer>
     <span class="footer-logo">~/oluwaseun</span>
-    <span>© 2025 Oluwaseun Osunsola · Built with purpose</span>
+    <span>© 2025 Oluwaseun Osunsola</span>
     <span style="font-family:'Space Mono',monospace;font-size:.75rem;color:var(--accent)">Security · DevOps · Cloud</span>
   </footer>
 
